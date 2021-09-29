@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JvasYp4WQVYHTgiGkuYhZxsP325GwvC/XsS+unGpLXk9xw72TAVfx0IbS8LQEFoasXwpvoG6+fCyBegRDxDgjQ==",
+  "dgSpecHash": "Rn5AJ5mXANf/dLpAAf87Bi461Dx5/chHYPKG/w1oAbDrDPun1de6c9rbk1mBZIDwXFhoEx7YNodnZ5NPiTOSCg==",
   "success": true,
-  "projectFilePath": "G:\\MPT\\Backend\\MPT\\WebAPIGateway\\WebAPIGateway.csproj",
+  "projectFilePath": "F:\\MIVA\\MIVA\\Backend\\MPT\\WebAPIGateway\\WebAPIGateway.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
