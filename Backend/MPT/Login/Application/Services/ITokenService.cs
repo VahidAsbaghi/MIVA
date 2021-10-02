@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Login.Model;
+﻿using Login.Core.Model;
 
-namespace Login.Services
+namespace Login.Application.Services
 {
     //https://github.com/joydipkanjilal/jwt-aspnetcore/blob/master/jwt-aspnetcore/ITokenService.cs
     public interface ITokenService

@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
+﻿using System.Data.SqlClient;
 using System.Threading.Tasks;
 using Dapper;
-using Login.Model;
+using Login.Core.Model;
+using Login.Core.Services;
 
-namespace Login.Repositories
+namespace Login.Infrastructure.Repositories
 {
     public class UserRepository : IUserRepository
     {
@@ -21,6 +19,18 @@ namespace Login.Repositories
                 conn.QuerySingleAsync<User>(
                     selectedUser,
                     new { UserId = id });
+            return user;
+        }
+
+        public async Task<User> GetByCredentials(string passwordHash)
+        {
+            string selectedUser = @"select TOP 1 * from UserTable
+                                    where UserTable.PasswordHash = @PassHash";
+            await using var conn = new SqlConnection(_connectionString);
+            var user = await
+                conn.QuerySingleAsync<User>(
+                    selectedUser,
+                    new { PassHash = passwordHash });
             return user;
         }
 

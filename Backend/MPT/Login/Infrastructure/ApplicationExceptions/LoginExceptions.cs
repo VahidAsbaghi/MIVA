@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace Login.Infrastructure
+namespace Login.Infrastructure.ApplicationExceptions
 {
     public class LoginExceptions:ApplicationException
     {
