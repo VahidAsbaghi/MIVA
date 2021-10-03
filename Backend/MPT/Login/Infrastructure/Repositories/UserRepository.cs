@@ -34,6 +34,18 @@ namespace Login.Infrastructure.Repositories
             return user;
         }
 
+        public async Task<User> GetByUsername(string userName)
+        {
+            string selectedUser = @"select TOP 1 * from UserTable
+                                    where UserTable.UserName = @Username";
+            await using var conn = new SqlConnection(_connectionString);
+            var user = await
+                conn.QuerySingleAsync<User>(
+                    selectedUser,
+                    new { Username = userName });
+            return user;
+        }
+
         public async Task<User> AddUser(User user)
         {
          const string addUserSql =

@@ -69,3 +69,7 @@ F:\MIVA\MIVA\Backend\MPT\Login\bin\Debug\netcoreapp3.1\System.IdentityModel.Toke
 F:\MIVA\MIVA\Backend\MPT\Login\obj\Debug\netcoreapp3.1\Login.csproj.CoreCompileInputs.cache
 F:\MIVA\MIVA\Backend\MPT\Login\obj\Debug\netcoreapp3.1\Login.MvcApplicationPartsAssemblyInfo.cs
 F:\MIVA\MIVA\Backend\MPT\Login\obj\Debug\netcoreapp3.1\Login.MvcApplicationPartsAssemblyInfo.cache
+F:\MIVA\MIVA\Backend\MPT\Login\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\MIVA\MIVA\Backend\MPT\Login\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+F:\MIVA\MIVA\Backend\MPT\Login\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\MIVA\MIVA\Backend\MPT\Login\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll

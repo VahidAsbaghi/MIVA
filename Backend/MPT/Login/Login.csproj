@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Infrastructure\Helper\" />
+    <Folder Include="Application\Services\" />
   </ItemGroup>
 
 </Project>

@@ -7,5 +7,6 @@ namespace Login.Core.Services
     {
         Task<User> GetById(string id);
         Task<User> GetByCredentials(string passwordHash);
+        Task<User> GetByUsername(string userName);
     }
 }
