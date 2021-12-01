@@ -32,14 +32,16 @@ namespace Login
             services.AddSwaggerGen(option =>
                 option.SwaggerDoc("Login", new OpenApiInfo {Title = "Login API", Version = "v1"}));
 
-            services.AddAuthentication(auth =>
+            services.AddAuthentication(options =>
             {
-                auth.DefaultAuthenticateScheme =  JwtBearerDefaults.AuthenticationScheme;
-                //auth.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-            .AddJwtBearer(options =>
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(cfg =>
             {
-                options.TokenValidationParameters = new TokenValidationParameters
+
+                cfg.RequireHttpsMetadata = false;
+                cfg.SaveToken = true;
+                cfg.TokenValidationParameters = new TokenValidationParameters()
                 {
                     ValidateIssuer = true,
                     ValidateAudience = true,
@@ -50,20 +52,21 @@ namespace Login
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
                 };
             });
+            
         }
     
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseSession();
+            //app.UseSession();
             app.Use(async (context, next) =>
             {
-                var token = context.Session.GetString("Token");
-                if (!string.IsNullOrEmpty(token))
-                {
-                    context.Request.Headers.Add("Authorization", "Bearer " + token);
-                }
+                //var token = context.Session.GetString("Token");
+                //if (!string.IsNullOrEmpty(token))
+                //{
+                //    context.Request.Headers.Add("Authorization", "Bearer " + token);
+                //}
                 await next();
             });
             app.UseAuthentication();
@@ -72,11 +75,7 @@ namespace Login
             {
                 setup.SwaggerEndpoint("/swagger/v1/swagger.json", "Event API V1");
             });
-            //if (env.IsDevelopment())
-            //{
-            //    app.UseDeveloperExceptionPage();
-            //}
-
+            
             app.UseRouting();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>

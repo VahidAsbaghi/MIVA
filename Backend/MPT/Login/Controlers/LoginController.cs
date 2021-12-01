@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Login.Infrastructure.Helper;
 using Microsoft.AspNetCore.Authorization;
 
 namespace Login.Controlers
@@ -12,16 +13,24 @@ namespace Login.Controlers
     [ApiController]
     public class LoginController : ControllerBase
     {
-        public LoginController()
+        private readonly IAuthenticateService _authenticateService;
+
+        public LoginController(IAuthenticateService authenticateService)
         {
-            
+            _authenticateService = authenticateService;
         }
         [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] Credentials credentials)
         {
+            var token=await _authenticateService.Authenticate(credentials);
 
-            return Ok();
+            if (string.IsNullOrEmpty(token))
+            {
+                return Unauthorized();
+            }
+
+            return Ok(token);
         }
     }
 

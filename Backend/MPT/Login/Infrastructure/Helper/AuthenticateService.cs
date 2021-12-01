@@ -5,12 +5,13 @@ using System.Threading.Tasks;
 using Login.Controlers;
 using Login.Core.Model;
 using Login.Core.Services;
+using Login.Infrastructure.Helper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 
 namespace Login.Application.Services
 {
-    public class AuthenticateService
+    public class AuthenticateService : IAuthenticateService
     {
         private readonly IUserRepository _userRepository;
         private readonly ITokenService _tokenService;
