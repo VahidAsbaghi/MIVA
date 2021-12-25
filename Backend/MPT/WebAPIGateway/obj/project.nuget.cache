@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Rn5AJ5mXANf/dLpAAf87Bi461Dx5/chHYPKG/w1oAbDrDPun1de6c9rbk1mBZIDwXFhoEx7YNodnZ5NPiTOSCg==",
+  "dgSpecHash": "J0V3gvnZ+/Oy0CsDZBGfDaSADH+7xWjv81CEkMIMlD9WEaw4uAwxUNjDMCC3oCvddd7yDkysFb8ocgDMRGXHJg==",
   "success": true,
   "projectFilePath": "F:\\MIVA\\MIVA\\Backend\\MPT\\WebAPIGateway\\WebAPIGateway.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Vahid\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512",
+    "C:\\Users\\Vahid\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
   "logs": []
 }

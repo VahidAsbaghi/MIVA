@@ -1,0 +1,21 @@
+﻿@model User
+
+@{
+    ViewData["Title"] = "Register User";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@using (Html.BeginForm("Register", "Register", FormMethod.Post))
+{
+    @Html.LabelFor(model=>model.Email,"Username")
+    @Html.EditorFor(model => model.Email, new { @class = "form-control" })
+    @Html.LabelFor(model=>model.Password,"Password")
+    @Html.PasswordFor(model => model.Password)
+    <input type="submit" value="Register"/>
+}
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}

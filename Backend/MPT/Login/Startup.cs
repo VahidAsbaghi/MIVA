@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Microsoft.Extensions.Configuration;
@@ -29,8 +30,15 @@ namespace Login
         }
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvcCore().AddApiExplorer();
+            services.AddControllers();
+
+            //services.AddEndpointsApiExplorer();
+            //builder.Services.AddSwaggerGen();
             services.AddSwaggerGen(option =>
                 option.SwaggerDoc("Login", new OpenApiInfo {Title = "Login API", Version = "v1"}));
+            
+            //services.AddHealthChecks();
 
             services.AddAuthentication(options =>
             {
@@ -70,14 +78,17 @@ namespace Login
                 await next();
             });
             app.UseAuthentication();
-            app.UseSwagger();
-            app.UseSwaggerUI(setup =>
+            if (env.IsDevelopment())
             {
-                setup.SwaggerEndpoint("/swagger/v1/swagger.json", "Event API V1");
-            });
-            
+                app.UseSwagger();
+                app.UseSwaggerUI(setup =>
+                {
+                    setup.SwaggerEndpoint("/swagger/Login/swagger.json", "Login");
+                    setup.RoutePrefix = string.Empty;
+                });
+            }
             app.UseRouting();
-            app.UseAuthorization();
+            //app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

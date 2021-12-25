@@ -20,7 +20,8 @@ namespace Login.Controlers
             _authenticateService = authenticateService;
         }
         [AllowAnonymous]
-        [HttpPost]
+        [HttpPost()]
+        //[Route("route")]
         public async Task<IActionResult> Login([FromBody] Credentials credentials)
         {
             var token=await _authenticateService.Authenticate(credentials);

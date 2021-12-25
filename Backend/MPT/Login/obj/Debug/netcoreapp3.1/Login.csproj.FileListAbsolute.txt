@@ -34,7 +34,6 @@ G:\MPT\Backend\MPT\Login\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1
 G:\MPT\Backend\MPT\Login\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 F:\MIVA\MIVA\Backend\MPT\Login\bin\Debug\netcoreapp3.1\appsettings.Development.json
 F:\MIVA\MIVA\Backend\MPT\Login\bin\Debug\netcoreapp3.1\appsettings.json
-F:\MIVA\MIVA\Backend\MPT\Login\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 F:\MIVA\MIVA\Backend\MPT\Login\bin\Debug\netcoreapp3.1\Login.exe
 F:\MIVA\MIVA\Backend\MPT\Login\bin\Debug\netcoreapp3.1\Login.deps.json
 F:\MIVA\MIVA\Backend\MPT\Login\bin\Debug\netcoreapp3.1\Login.runtimeconfig.json
@@ -52,13 +51,11 @@ F:\MIVA\MIVA\Backend\MPT\Login\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\s
 F:\MIVA\MIVA\Backend\MPT\Login\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 F:\MIVA\MIVA\Backend\MPT\Login\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 F:\MIVA\MIVA\Backend\MPT\Login\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-F:\MIVA\MIVA\Backend\MPT\Login\obj\Debug\netcoreapp3.1\Login.csprojAssemblyReference.cache
 F:\MIVA\MIVA\Backend\MPT\Login\obj\Debug\netcoreapp3.1\Login.AssemblyInfoInputs.cache
 F:\MIVA\MIVA\Backend\MPT\Login\obj\Debug\netcoreapp3.1\Login.AssemblyInfo.cs
 F:\MIVA\MIVA\Backend\MPT\Login\obj\Debug\netcoreapp3.1\Login.RazorTargetAssemblyInfo.cache
 F:\MIVA\MIVA\Backend\MPT\Login\obj\Debug\netcoreapp3.1\Login.csproj.CopyComplete
 F:\MIVA\MIVA\Backend\MPT\Login\obj\Debug\netcoreapp3.1\staticwebassets\Login.StaticWebAssets.Manifest.cache
-F:\MIVA\MIVA\Backend\MPT\Login\obj\Debug\netcoreapp3.1\staticwebassets\Login.StaticWebAssets.xml
 F:\MIVA\MIVA\Backend\MPT\Login\obj\Debug\netcoreapp3.1\Login.dll
 F:\MIVA\MIVA\Backend\MPT\Login\obj\Debug\netcoreapp3.1\Login.pdb
 F:\MIVA\MIVA\Backend\MPT\Login\obj\Debug\netcoreapp3.1\Login.genruntimeconfig.cache
@@ -73,3 +70,5 @@ F:\MIVA\MIVA\Backend\MPT\Login\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Auth
 F:\MIVA\MIVA\Backend\MPT\Login\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
 F:\MIVA\MIVA\Backend\MPT\Login\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 F:\MIVA\MIVA\Backend\MPT\Login\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\MIVA\MIVA\Backend\MPT\Login\obj\Debug\netcoreapp3.1\Login.csproj.AssemblyReference.cache
+F:\MIVA\MIVA\Backend\MPT\Login\obj\Debug\netcoreapp3.1\Login.GeneratedMSBuildEditorConfig.editorconfig
