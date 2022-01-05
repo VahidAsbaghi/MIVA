@@ -1,4 +1,4 @@
-﻿@model User
+﻿@model Registration.Models.UserViewModel
 
 @{
     ViewData["Title"] = "Register User";
@@ -8,8 +8,8 @@
 
 @using (Html.BeginForm("Register", "Register", FormMethod.Post))
 {
-    @Html.LabelFor(model=>model.Email,"Username")
-    @Html.EditorFor(model => model.Email, new { @class = "form-control" })
+    @Html.LabelFor(model=>model.Username,"Email")
+    @Html.EditorFor(model => model.Username, new { @class = "form-control" })
     @Html.LabelFor(model=>model.Password,"Password")
     @Html.PasswordFor(model => model.Password)
     <input type="submit" value="Register"/>

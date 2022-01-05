@@ -5,7 +5,7 @@ using Registration.Models;
 
 namespace Registration.Persistent
 {
-    public class UserRepository 
+    public class UserRepository : IUserRepository
     {
         private readonly string _connectionString= @"Data Source=.; Initial Catalog=UserRegistrationDb;
                                                     Integrated Security=True";
